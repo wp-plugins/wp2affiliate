@@ -1,0 +1,183 @@
+input:disabled, input.disabled, textarea:disabled, textarea.disabled {
+    background: none repeat scroll 0 0 #EEEEEE !important;
+    color: #959595 !important;
+}
+
+.form-table th{
+  width: 160px !important;
+}
+
+.wp2ap-redunderline {
+  color: #000000;
+  border-bottom: 2px solid #DE5959;
+}
+
+.wp2ap-warning {
+	color : #DE5959;
+}
+
+.wp2ap-ok {
+	color : #5F9025;
+}
+
+.wp2ap-unnamed {
+	color : silver;
+	font-style: italic;
+}
+
+.wp2ap-sort-icon {
+	vertical-align:  middle;
+  margin-left: 3px;
+}
+
+.wp2ap-cloaked-url-box {
+	width: 90%;
+}
+
+.wp2ap-form .lcp-title {
+	font-style: normal !important; 
+	width: 7em !important;
+}
+
+.wp2ap-form span.input-text-wrap {
+	margin-left: 7em !important;
+}
+
+#form-add-cloaked-link, #form-import-static-links {
+	width: 500px;
+}
+
+.wp2ap-optional-empty {
+	color: silver; 
+}
+
+/*
+	Tabs on the "Link Cloaker" settings page.
+	Warning : This is a mess.
+*/
+
+#wp2ap-tabs { 
+  float: left;
+  width: 83%;
+}
+
+#wp2ap-tabs.ui-tabs h3 {
+	display: none;
+}
+
+.metabox-holder h3 {
+	display: block !important;
+}
+
+#wp2ap-box .hndle {
+    cursor: auto;
+}
+
+#wp2ap-tabs .metabox-holder{
+padding-top: 0px !important;
+}
+
+#wp2ap-tabs p {
+    font-size: 14px;
+}
+
+/* The rest is bits and pieces ripped & adapted from a jQuery UI theme */
+
+/* Additional IE specific bug fixes... */
+* html .ui-tabs-nav { /* auto clear, @ IE 6 & IE 7 Quirks Mode */
+    display: inline-block;
+}
+*:first-child+html .ui-tabs-nav  { /* @ IE 7 Standards Mode - do not group selectors, otherwise IE 6 will ignore complete rule (because of the unknown + combinator)... */
+    display: inline-block;
+}
+
+/* Layout helpers
+----------------------------------*/
+.ui-helper-hidden { display: none; }
+.ui-helper-hidden-accessible { position: absolute; left: -99999999px; }
+.ui-helper-reset { margin: 0; padding: 0; border: 0; outline: 0; line-height: 1.3; text-decoration: none; font-size: 100%; list-style: none; }
+.ui-helper-clearfix:after { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
+.ui-helper-clearfix { display: inline-block; }
+/* required comment for clearfix to work in Opera \*/
+* html .ui-helper-clearfix { height:1%; }
+.ui-helper-clearfix { display:block; }
+/* end clearfix */
+.ui-helper-zfix { width: 100%; height: 100%; top: 0; left: 0; position: absolute; opacity: 0; filter:Alpha(Opacity=0); }
+
+/* Interaction Cues
+----------------------------------*/
+.ui-state-disabled { cursor: default !important; }
+
+/* Interaction states
+----------------------------------*/
+
+.ui-state-default, .ui-widget-content .ui-state-default { 
+	border: 1px solid #d3d3d3; 
+	/*background-color: #e6e6e6;*/ /* default */ 
+  background: #f1f1f1;
+	color: #555555; 
+	outline: none; 
+}
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { 
+	color: #555555; 
+	text-decoration: none; 
+	outline: none; 
+}
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus { 
+	border: 1px solid #999999; 
+	background-color: #dadada; /* default */ 
+	color: #212121; 
+	outline: none; 
+}
+.ui-state-hover a, .ui-state-hover a:hover { 
+	color: #212121;
+	text-decoration: none; 
+	outline: none; 
+}
+.ui-state-active, .ui-widget-content .ui-state-active {
+	border: 1px solid #aaaaaa; 
+  background: #FFFFFF; 
+	color: #212121; 
+	outline: none;
+}
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { 
+	color: #212121; 
+	outline: none; 
+	text-decoration: none; 
+}
+
+/* Tabs
+----------------------------------*/
+.ui-tabs { padding-top: 1.0em; zoom: 1; }
+.ui-tabs .ui-tabs-nav { list-style: none; position: relative; }
+.ui-tabs .ui-tabs-nav li { 
+	position: relative; 
+	float: left; 
+	border-bottom-width: 0 !important; 
+	margin: 0 .2em -1px 0; padding: 0; 
+}
+
+.ui-tabs .ui-tabs-nav li a { 
+	float: left; 
+	text-decoration: none; 
+	padding: .5em 1em;
+	font-weight: bold;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected { 
+	padding-bottom: 1px; 
+	border-bottom-width: 0;  
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a, .ui-tabs .ui-tabs-nav li.ui-state-disabled a, .ui-tabs .ui-tabs-nav li.ui-state-processing a { cursor: text; }
+.ui-tabs .ui-tabs-nav li a, .ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a { cursor: pointer; } /* first selector in group seems obsolete, but required to overcome bug in Opera applying cursor: text overall if defined elsewhere... */
+
+.ui-tabs .ui-tabs-panel { 
+	display: block; 
+	background: none;
+	border-color: #d3d3d3;
+	border-style: solid; 
+	border-width: 0px;
+	border-top-width: 1px;
+	border-bottom-width: 0px;
+}
+.ui-tabs .ui-tabs-hide { display: none !important; }
