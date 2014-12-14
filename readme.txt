@@ -1,24 +1,24 @@
 === WP2Affiliate ===
 Contributors: wp2affiliate
 Donate link: http://www.wp2affiliate.com
-Tags: Affiliate, Cloaking, Deeplinks, Deeplinking, Affiliate-Links, Affiliate-Marketing, Marketing, Geld verdienen, Amazon, Partnerprogramm, Deeplinkgenerator, Zanox, Affilinet, Tradedoubler, Maskierung
+Tags: Affiliate, Cloaking, Deeplinks, Deeplinking, Affiliate-Links, Affiliate-Marketing, Marketing, Geld verdienen, Amazon, Partnerprogramm, Deeplinkgenerator, Zanox, Affilinet, Tradedoubler, Maskierung, Masking
 Requires at least: 3.0.1
-Tested up to: 4.0.0
+Tested up to: 4.0.1
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Affiliate-Marketing so einfach wie nie! Automatische Generierung und Verwaltung von Affiliate-Deeplinks mit perfektem Link-Cloaking / URL-Masking. 
+Automatische Generierung und Verwaltung von Affiliate-Deeplinks. Mit perfektem Link-Cloaking / URL-Masking. Affiliate-Marketing so einfach wie nie!
 
 == Description ==
 
-Das Plugin &quot;WP to Affiliate&quot; verwandelt normale Links automatisch und in Echtzeit in Affiliate-Links. Dein Content wird dabei nicht ver&auml;ndert. Du f&uuml;gst einfach einen Normalen Link in deine Beitr&auml;ge oder Seiten ein und hinterlegst die Affiliate-Partnerschaft mit diesem Anbieter direkt im Plugin. Alle vorhandenen und zuk&uuml;nftigen Links werden automatisch mit deiner Partner-ID &uuml;ber das jeweilige Affiliate-Netzwerk geleitet. Unterst&uuml;tzt werden viele Affiliate-Programme bei gro&szlig;en Partnernetzwerken (Zanox, Affili.net, Tradedoubler, Amazon). 
+Das Plugin &quot;WP to Affiliate&quot; verwandelt normale Links automatisch und in Echtzeit in Affiliate-Links. Dein Content wird dabei nicht ver&auml;ndert. Du f&uuml;gst einfach einen normalen Link in deine Beitr&auml;ge oder Seiten ein und hinterlegst die Affiliate-Partnerschaft mit diesem Anbieter direkt im Plugin. Alle vorhandenen und zuk&uuml;nftigen Links werden automatisch mit deiner Partner-ID &uuml;ber das jeweilige Affiliate-Netzwerk geleitet. Unterst&uuml;tzt werden viele Affiliate-Programme bei gro&szlig;en Partnernetzwerken (Zanox, Affili.net, Tradedoubler, Amazon). 
 
-Link-Cloaking: Ausgehende Links werden versteckt/maskiert, so dass sie nicht als Affiliate-Links erkennbar sind. Die Umwandlung der URLs erfolgt Serverseitig, es ist keine JavaScript erforderlich und die Auslieferung deiner Seiten wird nicht verlangsamt.
+Link-Cloaking: Ausgehende Links werden versteckt/maskiert, so dass sie nicht als Affiliate-Links erkennbar sind. Die Umwandlung der URLs erfolgt serverseitig, es ist keine JavaScript erforderlich und die Auslieferung deiner Seiten wird nicht verlangsamt.
 
 = Plugin-Features: =
-* Automatischer Deeplink-Generator f&uuml;r Affiliate-Links
-* Verwaltung aller externen Links und Affiliate-Partnerschaften
+* Automatischer Deeplink-Generator f&uuml;r Affiliate-Links in Beitr&auml;gen, Seiten und Sidebar (konfigurierbar)
+* Zentrale Verwaltung aller externen Links und Affiliate-Partnerschaften
 * Eingebautes Link-Cloaking / URL-Masking (google-konform)
 * Eigener Link-Shortener mit Affiliate-Umwandlung 
 
@@ -29,7 +29,7 @@ Eine aktuelle Liste der unterst&uuml;tzen Affiliate-Programme findest du [hier](
 Das Plugin ist mit allen Funktionen kostenlos, du brauchst keine Premiumversion oder irgendeine Lizenz. Daf&uuml;r werden maximal 10% der Klicks nicht &uuml;ber deine Partner-ID abgewickelt. Einzelheiten zu dieser Klick-Beteiligung findest du [hier](http://www.wp2affiliate.com/price/ "Konditionen WP2Affiliate").
 
 = Mehr Infos zu WP2Affiliate =
-Ausführliche Informationen zum Plugin findest du auf der [Plugin Homepage](http://www.wp2affiliate.com/ "WP2Affiliate Plugin Homepage").
+Ausf&uuml;hrliche Informationen zum Plugin findest du auf der [Plugin Homepage](http://www.wp2affiliate.com/ "WP2Affiliate Plugin Homepage").
 
 
 == Installation ==
