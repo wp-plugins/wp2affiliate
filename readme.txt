@@ -12,7 +12,7 @@ Automatische Generierung und Verwaltung von Affiliate-Deeplinks. Mit perfektem L
 
 == Description ==
 
-Das Plugin &quot;WP to Affiliate&quot; verwandelt normale Links automatisch und in Echtzeit in Affiliate-Links. Dein Content wird dabei nicht ver&auml;ndert. Du f&uuml;gst einfach einen normalen Link in deine Beitr&auml;ge oder Seiten ein und hinterlegst die Affiliate-Partnerschaft mit diesem Anbieter direkt im Plugin. Alle vorhandenen und zuk&uuml;nftigen Links werden automatisch mit deiner Partner-ID &uuml;ber das jeweilige Affiliate-Netzwerk geleitet. Unterst&uuml;tzt werden viele Affiliate-Programme bei gro&szlig;en Partnernetzwerken (Zanox, Affili.net, Tradedoubler, Amazon). 
+Das Plugin &quot;WP to Affiliate&quot; verwandelt normale Links automatisch und in Echtzeit in Affiliate-Links. Dein Content wird dabei nicht ver&auml;ndert. Du f&uuml;gst einfach einen normalen Link in deine Beitr&auml;ge oder Seiten ein und hinterlegst die Affiliate-Partnerschaft mit diesem Anbieter direkt im Plugin. Alle vorhandenen und zuk&uuml;nftigen Links werden automatisch mit deiner Partner-ID &uuml;ber das jeweilige Affiliate-Netzwerk geleitet. Unterst&uuml;tzt werden viele Affiliate-Programme bei gro&szlig;en Partnernetzwerken (Zanox, Affili.net, Tradedoubler, Amazon). Das generieren von Deeplinks war noch nie so einfach! 
 
 Link-Cloaking: Ausgehende Links werden versteckt/maskiert, so dass sie nicht als Affiliate-Links erkennbar sind. Die Umwandlung der URLs erfolgt serverseitig, es ist keine JavaScript erforderlich und die Auslieferung deiner Seiten wird nicht verlangsamt.
 
@@ -23,7 +23,7 @@ Link-Cloaking: Ausgehende Links werden versteckt/maskiert, so dass sie nicht als
 * Eigener Link-Shortener mit Affiliate-Umwandlung 
 
 = Affiliate-Programme =
-Eine aktuelle Liste der unterst&uuml;tzen Affiliate-Programme findest du [hier](http://www.wp2affiliate.com/affiliate-programs/ "Liste der Affiliate Programme"). Fehlt dir ein wichtiges Programm? Schreib uns einfach &uuml;ber das [Support-Formular](http://www.wp2affiliate.com/support/ "Plugin Support"), wir integrieren st&auml;ndig neue Anbieter und Netzwerke!
+Eine aktuelle Liste der unterst&uuml;tzen Affiliate-Programme findest du [hier](http://www.wp2affiliate.com/affiliate-programs/ "Liste der Affiliate Programme"). Aktuell werden vor allem Partnerprogramme aus dem Reise-Bereich integriert, weitere Branchen folgen. Fehlt dir ein wichtiges Programm? Schreib uns einfach &uuml;ber das [Support-Formular](http://www.wp2affiliate.com/support/ "Plugin Support"), wir integrieren st&auml;ndig neue Anbieter und Netzwerke!
 
 = Preis: Das Plugin ist kostenlos! =
 Das Plugin ist mit allen Funktionen kostenlos, du brauchst keine Premiumversion oder irgendeine Lizenz. Daf&uuml;r werden maximal 10% der Klicks nicht &uuml;ber deine Partner-ID abgewickelt. Einzelheiten zu dieser Klick-Beteiligung findest du [hier](http://www.wp2affiliate.com/price/ "Konditionen WP2Affiliate").
@@ -66,6 +66,12 @@ Bitte beachte auch den FAQ-Bereich auf der [Plugin Homepage](http://www.wp2affil
 
 
 == Changelog ==
+
+= 0.00.33 =
+* Fehlerkorrektur in Readme.txt
+* Icons und Header-Grafik hinzugef&uuml;gt
+* Neues Affiliate-Programm: AIDA.de
+* Neues Affiliate-Programm: Sonnenklar.TV
 
 = 0.00.31 =
 * Erste stabile Beta-Version

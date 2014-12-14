@@ -40,6 +40,8 @@ $rows[] = array('http://www.holidaycheck.de', '.holidaycheck.de', 'HolidayCheck'
 $rows[] = array('http://www.ebookers.de', '.ebookers.de', 'ebookers.de', 'Reise', 'zanox', 'http://www.zanox-affiliate.de/ppc/?28216342C438668017T&ULP=[[1635]]');
 $rows[] = array('http://www.5vorflug.de', '.5vorflug.de', '5vorFlug', 'Reise', 'affilinet', 'http://publisher.affili.net/Programs/programInfo.aspx?pid=9841');
 $rows[] = array('http://www.hotels.com', '.hotels.com', 'Hotels.com', 'Reise', 'tradedoubler', 'http://login.tradedoubler.com/pan/aProgramInfoApplyRead.action?programId=67379');
+$rows[] = array('http://www.sonnenklar.tv', '.sonnenklar.tv', 'Sonnenklar.TV', 'Reise', 'affilinet', 'http://publisher.affili.net/Programs/ProgramInfo.aspx?pid=3719');
+$rows[] = array('http://www.aida.de', '.aida.de', 'AIDA', 'Reise', 'zanox', 'xx');
 
 // Fürs Testing:
 // $rows[] = array('http://www.whatismyreferer.com', '.whatismyreferer.com', 'Whtaismyreferer', 'Test', '', '');
