@@ -67,6 +67,10 @@ Bitte beachte auch den FAQ-Bereich auf der [Plugin Homepage](http://www.wp2affil
 
 == Changelog ==
 
+= 0.00.32 =
+* Fehlerkorrektur in Readme.txt
+* Icons und Header-GRafik hinzugef&uuml;gt
+
 = 0.00.31 =
 * Erste stabile Beta-Version
 * Sprachen: Deutsch, Englisch
