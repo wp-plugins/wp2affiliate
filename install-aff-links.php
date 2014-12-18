@@ -42,6 +42,7 @@ $rows[] = array('http://www.5vorflug.de', '.5vorflug.de', '5vorFlug', 'Reise', '
 $rows[] = array('http://www.hotels.com', '.hotels.com', 'Hotels.com', 'Reise', 'tradedoubler', 'http://login.tradedoubler.com/pan/aProgramInfoApplyRead.action?programId=67379');
 $rows[] = array('http://www.sonnenklar.tv', '.sonnenklar.tv', 'Sonnenklar.TV', 'Reise', 'affilinet', 'http://publisher.affili.net/Programs/ProgramInfo.aspx?pid=3719');
 $rows[] = array('http://www.aida.de', '.aida.de', 'AIDA', 'Reise', 'zanox', 'xx');
+$rows[] = array('http://www.flixbus.de', 'flixbus.de', 'Flixbus', 'Reise', 'affilinet', 'http://publisher.affili.net/Programs/ProgramInfo.aspx?pid=5050');
 
 // Fürs Testing:
 // $rows[] = array('http://www.whatismyreferer.com', '.whatismyreferer.com', 'Whtaismyreferer', 'Test', '', '');

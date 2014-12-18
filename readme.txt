@@ -67,6 +67,10 @@ Bitte beachte auch den FAQ-Bereich auf der [Plugin Homepage](http://www.wp2affil
 
 == Changelog ==
 
+= 0.00.34 =
+* Neues Affiliate-Programm: Flixbus.de
+* Fehlerkorrektur bei bestimmten URL-Parametern
+
 = 0.00.33 =
 * Fehlerkorrektur in Readme.txt
 * Icons und Header-Grafik hinzugef&uuml;gt
