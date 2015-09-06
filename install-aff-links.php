@@ -22,7 +22,7 @@ TODO: Netzwerk-Links bei Zanox anpassen (ohne eigene Partner-ID)
 */
 
 // Hier werden die Aff-Programme gepflegt. Beim install oder update werden die Werte in die DB geschrieben
-$rows[] = array('http://www.weg.de', '.weg.de', 'Weg.de', 'Reise', 'affilinet', 'http://publisher.affili.net/Creatives/showCreatives.aspx?lcid=67917&pid=9104');
+$rows[] = array('http://www.weg.de', '.weg.de', 'Weg.de', 'Reise', 'tradedoubler', 'http://login.tradedoubler.com/pan/aProgramInfoApplyRead.action?programId=43802&affiliateId=2211996');
 $rows[] = array('http://www.expedia.de/', '.expedia.', 'Expedia.de', 'Reise', 'tradedoubler', 'http://login.tradedoubler.com/pan/aProgramInfoApplyRead.action?programId=10928');
 $rows[] = array('http://www.ab-in-den-urlaub.de/', '.ab-in-den-urlaub.de', 'Ab-in-den-Urlaub.de', 'Reise', 'zanox', 'http://www.zanox-affiliate.de/ppc/?28216342C438668017T&ULP=[[9333]]');
 $rows[] = array('http://www.lastminute.de/', '.lastminute.de', 'lastminute.de', 'Reise', 'affilinet', 'http://publisher.affili.net/Programs/ProgramInfo.aspx?pid=4659');
@@ -42,7 +42,7 @@ $rows[] = array('http://www.5vorflug.de', '.5vorflug.de', '5vorFlug', 'Reise', '
 $rows[] = array('http://www.hotels.com', '.hotels.com', 'Hotels.com', 'Reise', 'tradedoubler', 'http://login.tradedoubler.com/pan/aProgramInfoApplyRead.action?programId=67379');
 $rows[] = array('http://www.sonnenklar.tv', '.sonnenklar.tv', 'Sonnenklar.TV', 'Reise', 'affilinet', 'http://publisher.affili.net/Programs/ProgramInfo.aspx?pid=3719');
 $rows[] = array('http://www.aida.de', '.aida.de', 'AIDA', 'Reise', 'zanox', 'xx');
-$rows[] = array('http://www.flixbus.de', 'flixbus.de', 'Flixbus', 'Reise', 'affilinet', 'http://publisher.affili.net/Programs/ProgramInfo.aspx?pid=5050');
+$rows[] = array('http://www.zalando.de/', '.zalando.de', 'Zalando', 'Fashion', 'affilinet', 'http://publisher.affili.net/Creatives/showCreatives.aspx?pid=5643');
 
 // Fürs Testing:
 // $rows[] = array('http://www.whatismyreferer.com', '.whatismyreferer.com', 'Whtaismyreferer', 'Test', '', '');
