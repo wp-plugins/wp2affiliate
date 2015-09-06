@@ -67,6 +67,9 @@ Bitte beachte auch den FAQ-Bereich auf der [Plugin Homepage](http://www.wp2affil
 
 == Changelog ==
 
+= 0.00.37 =
+* Darstellungsproblem in der Affiliate-Programm-Liste bei WP 4.3 behoben
+
 = 0.00.36 =
 * Neues Affiliate-Programm: Zalando.de
 * Netzwerk-Wechsel: Weg.de jetzt &uuml;ber tradedoubler (bei Zanox und Affili.net nicht mehr verf&uuml;gbar). Bitte Einstellungen pr&uuml;fen!
