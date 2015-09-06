@@ -3,7 +3,7 @@ Contributors: wp2affiliate
 Donate link: http://www.wp2affiliate.com
 Tags: Affiliate, Cloaking, Deeplinks, Deeplinking, Affiliate-Links, Affiliate-Marketing, Marketing, Geld verdienen, Amazon, Partnerprogramm, Deeplinkgenerator, Zanox, Affilinet, Tradedoubler, Maskierung, Masking
 Requires at least: 3.0.1
-Tested up to: 4.3.0
+Tested up to: 4.3
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -67,9 +67,9 @@ Bitte beachte auch den FAQ-Bereich auf der [Plugin Homepage](http://www.wp2affil
 
 == Changelog ==
 
-= 0.00.35 =
+= 0.00.36 =
 * Neues Affiliate-Programm: Zalando.de
-* Netzwerk-Wechsel: Weg.de jetzt u&uml;ber tradedoubler (bei Zanox und Affili.net nicht mehr verf&uuml;gbar). Bitte Einstellungen pr&uuml;fen!
+* Netzwerk-Wechsel: Weg.de jetzt &uuml;ber tradedoubler (bei Zanox und Affili.net nicht mehr verf&uuml;gbar). Bitte Einstellungen pr&uuml;fen!
 
 = 0.00.33 =
 * Fehlerkorrektur in Readme.txt
