@@ -8,7 +8,7 @@ Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Verwandelt normale Links in Affiliate-Deeplinks f&uuml;r Zanox, Affili.net, Amazon und Tradedoubler. Inklusive Link-Cloaking. Du wirst es lieben!
+Kovertiert normale Links in Affiliate-Deeplinks f&uuml;r Zanox, Affili.net, Amazon und Tradedoubler. Inklusive Link-Cloaking. Du wirst es lieben!
 
 == Description ==
 
