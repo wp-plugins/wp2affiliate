@@ -73,6 +73,9 @@ $( function(){
 	   if ( netzwerkliste.indexOf('amazon') == -1) {
 	 		$('select[name="nw_aktiv"] option[value="amazon"]', editRow).remove();
 	   	}
+	   if ( netzwerkliste.indexOf('digistore24') == -1) {
+	 		$('select[name="nw_aktiv"] option[value="digistore24"]', editRow).remove();
+	   	}
   		
 			$(editRow).attr('id', 'edit-'+id).addClass('inline-editor').show();
 			$('.ptitle', editRow).focus();

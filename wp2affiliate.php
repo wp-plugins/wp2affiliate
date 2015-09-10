@@ -2,8 +2,8 @@
 /*
 Plugin Name: wp2affiliate
 Plugin URI: http://www.wp2affiliate.com/
-Description: Automatische Umwandlung von normalen Links zu Affiliate-Deeplinks, ohne den Content dabei zu ver&auml;ndern. Die Links werden au&szlig;erdem per Link-Cloaking / URL-Masking versteckt, so dass sie nicht als Affiliate-Links erkennbar sind. Unterst&uuml;tz werden Affiliate-Programme von Zanox und Affili.net, sowie Tradedoubler und Amazon. Kein Zwischenh&auml;ndler: Die Provisionierung erfolgt &uuml;ber deine eigene Partner-ID des jeweiligen Netzwerks. Das Plugin ist kostenlos und erfordert keine Anmeldung, daf&uuml;r werden maximal 10% der Klicks automatisch an wp2affiliate abgegeben (nur bei bestimmten Affiliate-Programmen, siehe Plugin-Homepage).  
-Version: 0.00.37
+Description: Automatische Umwandlung von normalen Links zu Affiliate-Deeplinks, ohne den Content dabei zu ver&auml;ndern. Die Links werden au&szlig;erdem per Link-Cloaking / URL-Masking versteckt, so dass sie nicht als Affiliate-Links erkennbar sind. Unterst&uuml;tz werden Affiliate-Programme von Zanox und Affili.net, sowie Tradedoubler und Amazon. Kein Zwischenh&auml;ndler: Die Provisionierung erfolgt &uuml;ber deine eigene Partner-ID des jeweiligen Netzwerks. Das Plugin ist kostenlos und erfordert keine Anmeldung, daf&uuml;r werden maximal 5% der Klicks automatisch an wp2affiliate abgegeben (nur bei bestimmten Affiliate-Programmen, siehe Plugin-Homepage).  
+Version: 0.01.03
 Author: wp2affiliate
 Author URI: http://www.wp2affiliate.com
 Text Domain: wp2affiliate
@@ -27,7 +27,7 @@ if (!function_exists('file_put_contents')) {
 if (!class_exists('Wp2Affiliate')) {
 
 class Wp2Affiliate {
-	var $version = '0.00.37';
+	var $version = '0.01.03';
 	
 	var $plugin_slug = 'wp-2-affiliate';
 			
@@ -44,10 +44,11 @@ class Wp2Affiliate {
   'zanox', 
   'affilinet',
   'tradedoubler',
-  'amazon'
+  'amazon',
+  'digistore24'
   ); 
 
-// Hiermit wird geprüft, ob ein Link bereits ein bekannter Affiliate-Link ist. Diese Prüfung muss beim Redirect und bei der Anzeige des Affstatus erfolgen. Amazon muss zusätzlich extra geprüft werden.
+// Hiermit wird geprüft, ob ein Link bereits ein bekannter Affiliate-Link ist. Diese Prüfung muss beim Redirect und bei der Anzeige des Affstatus erfolgen. Amazon und Digistore24 müssen zusätzlich extra geprüft werden (an 2 Stellen).
 // Falls Netzwerke mehrere URLs haben, dürfen sie mehrfach vorkommen. Pflege nur hier nötig. Das Netzwerk muss kein unterstütztes sein.
   var	$bekannteaffs = array( // Todo: Das müssen noch mehr werden!
   'http://ad.zanox.com/ppc/',
@@ -107,6 +108,7 @@ class Wp2Affiliate {
       'zanox' => '',
       'tradedoubler' => '',
       'amazon' => '',
+      'digistore24' => '',
  
 		);
 		
@@ -690,7 +692,12 @@ foreach($this->bekannteaffs AS $a){
   }
 }
 // Auf Amazon-Link mit Aff-Code prüfen, da wollen wir ebenfalls abbrechen
-if (stripos($urlroh, '.amazon.')!==false AND stripos($urlroh, 'tag=')!==false){ 
+//if (stripos($urlroh, '.amazon.')!==false AND stripos($urlroh, 'tag=')!==false){ 
+if (stripos($urlroh, '.amazon.')!==false AND (stripos($urlroh, 'tag=')!==false OR stripos($urlroh, 'tag%3D')!==false)){ // Wenn der Parameter "tag=" enthalten ist, ist es schon ein Affiliate-Link. Parameter könnte auch encodiert sein (war bei genialeangebote der Fall)
+  $bekannterlink = '1';
+  }
+// Auf Digistore24-Link mit Aff-Code prüfen, da wollen wir ebenfalls abbrechen
+if (stripos($urlroh, '.digistore24.')!==false AND (stripos($urlroh, 'promo.')!==false OR stripos($urlroh, 'aff=')!==false)){ // Wenn es ein Digistore-Link ist, ist er nur dann ein bekannter Aff-Link, wenn "promo." oder "aff=" darin vorkommt 
   $bekannterlink = '1';
   }
 
@@ -709,7 +716,7 @@ return $urlroh;
     $nw = rawurlencode($linkdata[0]['nw_aktiv']);
     $id = rawurlencode($linkdata[0]['aff_code']);
     $v = rawurlencode($this->version);
-  //  $q = rawurlencode(get_option('home'));  // Die Quelle brauchen wir momentan nicht
+    $q = rawurlencode(get_option('home'));  // Die Quelle brauchen wir momentan nicht
     
 
     if ($this->options['testing'] == true){
@@ -721,7 +728,7 @@ return $urlroh;
     if ($nw AND $id){ $link .= "&nw=".$nw."&id=".$id;} // Falls vorhanden, ergänzen wir Netzwerk und ID
     
     $link .= "&v=".$v; // Am Ende ergänzen wir noch Plugin-Version
-  //  $link .= "&q=".$q; // und die Quelle, falls wir das mal brauchen
+    $link .= "&q=".$q; // und die Quelle, falls wir das mal brauchen
     
     return $link; // fertiger Link zum wp2a Server wird zum redirect übergeben
     
@@ -1130,6 +1137,11 @@ return $urlroh;
       		$q = "UPDATE {$wpdb->prefix}wp2ap_aff_links SET aff_code = '".trim($wpdb->escape($_POST['amazon']))."' WHERE nw_aktiv = 'amazon'";
       		$wpdb->query($q);
           } 
+				if ( $_POST['digistore24'] != $this->options['digistore24'] ){ // Wenn eine Netzwerk-ID eingetragen wurde, die vom vorhandenen Wert in den Options abweicht, speichern wir diese in die Options und in der DB bei allen Aff-Porgrammen, die das Netzwerk aktiv haben
+					$this->options['digistore24'] = trim($_POST['digistore24']);
+      		$q = "UPDATE {$wpdb->prefix}wp2ap_aff_links SET aff_code = '".trim($wpdb->escape($_POST['digistore24']))."' WHERE nw_aktiv = 'digistore24'";
+      		$wpdb->query($q);
+          } 
         // ### Holger: Ende neue Optionen mit Affiliate-Netzwerken
 				
 				$this->options['blacklist'] = array_filter( preg_split( '/[\s,\r\n]+/', $_POST['blacklist'] ) );
@@ -1441,6 +1453,19 @@ return $urlroh;
 
 </tr>  
 
+<tr valign="top"> 
+<th scope="row" style="width: 100px;"><a title="Digistore24" target="_blank" href="https://www.digistore24.com/join/28869"><?php _e('Digistore24', 'wp-2-affiliate'); ?></a></th> 
+<td style="vertical-align: top;"><input type='text' name='digistore24' id='digistore24' value='<?php echo $this->options['digistore24']; ?>' size='15' />
+</td>
+<td style="vertical-align: top;">
+  <p><?php _e('Your Digistore24-ID', 'wp-2-affiliate'); ?></p>
+  <p><?php _e('Example:', 'wp-2-affiliate'); ?> <code>username</code></p>
+  <p><?php _e('Source:', 'wp-2-affiliate'); ?> http://promo.<span class="wp2ap-redunderline">username</span>.12345.digistore24.com/ <?php _e('or', 'wp-2-affiliate'); ?> https://www.digistore24.com/product/12345?aff=<span class="wp2ap-redunderline">username</span></p>
+  <p><?php _e('Only works for product-links like https://www.digistore24.com/product/12345, not for digistore24-homepage or signup!', 'wp-2-affiliate'); ?></p>
+</td>
+
+</tr>  
+
 </table>
 
 <p class="submit"><input type="submit" name="submit" class='button-primary' value="<?php _e('Save All Changes', 'wp-2-affiliate'); ?>" /></p>
@@ -1562,7 +1587,11 @@ return $urlroh;
               break; // Sobald wir einen Treffer haben, brechen wir das foreach ab. Dann handelt es sich um einen vorhandenen Affiliate-Link (nicht durch wp2a verwaltet)
               }
               }
-            if (stripos($link['url'], '.amazon.')!==false AND stripos($link['url'], 'tag=')!==false){ 
+            // if (stripos($link['url'], '.amazon.')!==false AND stripos($link['url'], 'tag=')!==false){
+            if (stripos($link['url'], '.amazon.')!==false AND (stripos($link['url'], 'tag=')!==false OR stripos($link['url'], 'tag%3D')!==false)){ // Wenn der Parameter "tag=" enthalten ist, ist es schon ein Affiliate-Link. Parameter könnte auch encodiert sein (war bei genialeangebote der Fall) 
+              $bekannterlink = '1';
+              } 
+            if (stripos($link['url'], '.digistore24.')!==false AND (stripos($link['url'], 'promo.')!==false AND stripos($link['url'], 'aff=')!==false)){ // Wenn es ein Digistore-Link ist, ist er nur dann ein bekannter Aff-Link, wenn "promo." oder "aff=" darin vorkommt
               $bekannterlink = '1';
               }
 
