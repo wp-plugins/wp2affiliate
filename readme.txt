@@ -91,7 +91,11 @@ Bitte beachte auch den FAQ-Bereich auf der [Plugin Homepage](http://www.wp2affil
 
 == Changelog ==
 
-= 0.01.02 =
+= 0.01.04 =
+* Neues Affiliate-Programm: Topdeals.de &uuml;ber Affili.net
+* Neues Affiliate-Programm: wefashion.de / WE Fashion &uuml;ber Zanox
+
+= 0.01.03 =
 * Neues Affiliate-Programm: Conrad.de &uuml;ber Affili.net (Deeplinks nur f&uuml;r Produkte, Kategorien und Suche. Alles andere geht auf die Conrad-Startseite.)
 * Neues Affiliate-Programm: Saturn.de &uuml;ber Affili.net
 * Neues Affiliate-Programm: MeinFernbus.de &uuml;ber Affili.net
