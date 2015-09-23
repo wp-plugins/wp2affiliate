@@ -94,6 +94,7 @@ Bitte beachte auch den FAQ-Bereich auf der [Plugin Homepage](http://www.wp2affil
 = 0.01.04 =
 * Neues Affiliate-Programm: Topdeals.de &uuml;ber Affili.net
 * Neues Affiliate-Programm: wefashion.de / WE Fashion &uuml;ber Zanox
+* Danke an Sven und Michael f&uuml;r die Vorschl&auml;ge!
 
 = 0.01.03 =
 * Neues Affiliate-Programm: Conrad.de &uuml;ber Affili.net (Deeplinks nur f&uuml;r Produkte, Kategorien und Suche. Alles andere geht auf die Conrad-Startseite.)
