@@ -91,6 +91,9 @@ Bitte beachte auch den FAQ-Bereich auf der [Plugin Homepage](http://www.wp2affil
 
 == Changelog ==
 
+= 0.01.05 =
+* Fehler Korrektur: Vorhandene Affiliate-Links mit https wurden unter Umst&auml;nden nicht richtig erkannt
+
 = 0.01.04 =
 * Neues Affiliate-Programm: Topdeals.de &uuml;ber Affili.net
 * Neues Affiliate-Programm: wefashion.de / WE Fashion &uuml;ber Zanox

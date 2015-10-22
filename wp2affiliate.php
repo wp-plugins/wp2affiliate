@@ -3,7 +3,7 @@
 Plugin Name: wp2affiliate
 Plugin URI: http://www.wp2affiliate.com/
 Description: Automatische Umwandlung von normalen Links zu Affiliate-Deeplinks, ohne den Content dabei zu ver&auml;ndern. Die Links werden au&szlig;erdem per Link-Cloaking / URL-Masking versteckt, so dass sie nicht als Affiliate-Links erkennbar sind. Unterst&uuml;tz werden Affiliate-Programme von Zanox und Affili.net, sowie Tradedoubler und Amazon. Kein Zwischenh&auml;ndler: Die Provisionierung erfolgt &uuml;ber deine eigene Partner-ID des jeweiligen Netzwerks. Das Plugin ist kostenlos und erfordert keine Anmeldung, daf&uuml;r werden maximal 5% der Klicks automatisch an wp2affiliate abgegeben (nur bei bestimmten Affiliate-Programmen, siehe Plugin-Homepage).  
-Version: 0.01.04
+Version: 0.01.05
 Author: wp2affiliate
 Author URI: http://www.wp2affiliate.com
 Text Domain: wp2affiliate
@@ -52,9 +52,13 @@ class Wp2Affiliate {
 // Falls Netzwerke mehrere URLs haben, dürfen sie mehrfach vorkommen. Pflege nur hier nötig. Das Netzwerk muss kein unterstütztes sein.
   var	$bekannteaffs = array( // Todo: Das müssen noch mehr werden!
   'http://ad.zanox.com/ppc/',
+  'https://ad.zanox.com/ppc/',
   'http://www.zanox-affiliate.de/ppc/',
+  'https://www.zanox-affiliate.de/ppc/',
   'http://partners.webmasterplan.com/click',
-  'http://clkde.tradedoubler.com/click'
+  'https://partners.webmasterplan.com/click',
+  'http://clkde.tradedoubler.com/click',
+  'https://clkde.tradedoubler.com/click'
   );
 
 
