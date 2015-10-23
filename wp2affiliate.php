@@ -27,7 +27,7 @@ if (!function_exists('file_put_contents')) {
 if (!class_exists('Wp2Affiliate')) {
 
 class Wp2Affiliate {
-	var $version = '0.01.04';
+	var $version = '0.01.05';
 	
 	var $plugin_slug = 'wp-2-affiliate';
 			
